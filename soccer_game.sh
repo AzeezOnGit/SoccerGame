@@ -1,5 +1,6 @@
 #!/bin/bash
 
+chooaw_class() {
 # Array for class
 class_conditions=("Forward" "Midfielder" "Defender" "Goalie" "Coach")
 
