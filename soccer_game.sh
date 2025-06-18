@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chooaw_class() {
+choose_class() {
 # Array for class
 class_conditions=("Forward" "Midfielder" "Defender" "Goalie" "Coach")
 
@@ -24,3 +24,5 @@ echo "Welcome to this soccer simulator game!"
 echo "What is your name player?"
 read username 
 echo "Welome $username, get ready to have some fun!"
+
+fi
