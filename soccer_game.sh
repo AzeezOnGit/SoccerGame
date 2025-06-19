@@ -2,7 +2,30 @@
 
 # Array for class
 class_conditions=("Forward" "Midfielder" "Defender" "Goalie" "Coach")
+# Function for forward stats
+forward_stats() {
+	echo "This player is an offensive beast. They are fast, can score the ball well, and are strong against defenders."
+}
 
+# Function for midfielder stats
+midfielder_stats() {
+	echo "This player is a genuis on the ball. This player can dicatate the tempo of the game and always pick out the right passes. This player is a forwards dream."
+}
+
+# Function for defender stats 
+defender_stats() {
+	echo "This player is a core part of the game. This player is the rock of the team and the player who stops forwards from scoring 10 plus goals a game."
+}
+
+# Function for goalie stats
+goalie_stats() {
+	echo "This player is the person behind the net. The shot blocker, the brick wall, the savior. This player has crazy reflexes when saving the ball as well."
+}
+
+# Function for coach stats
+coach_stats() {
+	echo "This player is the tactician and the decision maker of a team. This player can either win a game or lose a game for the team horribly."
+}
 # Function to choose class
 choose_class() {
 	read -p "Do you want to choose an available class? (y/n): " user_choice
@@ -36,6 +59,21 @@ echo "Welcome to this soccer simulator game!"
 echo "What is your name player?"
 read username 
 echo "Welome $username, get ready to have some fun!"
+echo "In this game, you will be given the option to choose between different player classes, and their statistics beforehand to help you with your decision."
+
+echo "Here are the available positions and statistics:"
+
+for class in "${class_conditions[@]}"; do
+	case "$class" in 
+		"Forward") forward_stats ;;
+		"Midfielder") midfielder_stats ;;
+		"Defender") defender_stats ;;
+		"Goalie") goalie_stats ;;
+		"Coach") coach_stats ;;
+	esac
+	sleep 1
+	echo "That is everythinh."
+done
 
 choose_class
 choose_race
