@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Array for class
-class_conditions=("Forward" "Midfielder" "Defender" "Goalie" "Coach")
+player_classes=("Forward" "Midfielder" "Defender" "Goalie" "Coach")
 # Function for forward stats
 forward_stats() {
-	echo "This player is an offensive beast. They are fast, can score the ball well, and are strong against defenders."
+	echo "Let's start with the forward. This player is an offensive beast. They are fast, can score the ball well, and are strong against defenders."
 }
 
 # Function for midfielder stats
@@ -63,7 +63,7 @@ echo "In this game, you will be given the option to choose between different pla
 
 echo "Here are the available positions and statistics:"
 
-for class in "${class_conditions[@]}"; do
+for class in "${player_classes[@]}"; do
 	case "$class" in 
 		"Forward") forward_stats ;;
 		"Midfielder") midfielder_stats ;;
@@ -72,8 +72,7 @@ for class in "${class_conditions[@]}"; do
 		"Coach") coach_stats ;;
 	esac
 	sleep 1
-	echo "That is everythinh."
 done
-
+echo "That is evrything"
 choose_class
 choose_race
